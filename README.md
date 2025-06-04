@@ -28,7 +28,7 @@
 
 ## 📦 Download APK
 
-👉 [Click here to download the latest TRI:DOTS APK](https://drive.google.com/file/d/1JkJR4vZcmPPXyY6R338zNZHx_NL6e2fq/view?usp=sharing)
+👉 [Click here to download the latest TRI:DOTS APK](https://lionsgoldencircle.com/Tridots/apk/app-debug.apk)
 
 > 📌 *Make sure "Install from Unknown Sources" is enabled on your Android device.*
 
