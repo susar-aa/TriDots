@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--
+    This drawable creates a blue gradient background for the Marketplace category card.
+    The angle is set to 45 degrees for a pleasant diagonal effect.
+    -->
+
+    <gradient
+        android:angle="45"
+        android:endColor="#009BFD"
+        android:startColor="#2980B9"
+        android:type="linear" />
+
+    <!--
+    The corner radius should match the card's corner radius to ensure the gradient
+    fills the card perfectly without being clipped.
+    -->
+    <corners
+        android:radius="16dp" />
+
+</shape>

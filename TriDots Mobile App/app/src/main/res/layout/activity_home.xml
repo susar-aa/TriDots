@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_default">
+
+    <!-- App Bar Layout with Collapsing Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:contentScrim="@color/primary_green"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Large"
+            app:collapsedTitleTextColor="@android:color/white">
+
+            <!-- Header Background with Gradient -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/header_home_background"
+                android:orientation="vertical"
+                android:padding="24dp"
+                app:layout_collapseMode="parallax">
+
+            </LinearLayout>
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:layout_margin="10dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/headerImageView"
+                    android:layout_marginTop="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="start"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/detailed_inverted_logo_cropped" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <!-- Progress Bar -->
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="16dp"
+                android:visibility="gone"
+                style="@style/Widget.AppCompat.ProgressBar" />
+
+            <!-- Banner Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardElevation="8dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bannerRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:clipToPadding="false" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="24dp">
+
+                <!-- Use GridLayout for 2x2 structure -->
+                <GridLayout
+                    android:id="@+id/categoryGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="2"
+                    android:alignmentMode="alignMargins"
+                    android:columnOrderPreserved="false">
+
+                    <!-- Machines Category -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/machinesCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardElevation="4dp"
+                        app:cardCornerRadius="30dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/category_gradient_machines"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/icons8_gear_50"
+                                android:layout_marginLeft="10dp"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:text="@string/machines"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Vehicles Category -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/vehiclesCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/category_gradient_vehicles"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/ic_steeringwheel"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="Vehicles"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Laborers Category -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/laborersCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/category_gradient_laborers"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/icons8_workers_50"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="12dp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="@string/laborers"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Marketplace Category -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/marketplaceCategory"
+                        android:layout_width="0dp"
+                        android:layout_height="80dp"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="30dp"
+                        app:cardElevation="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?android:attr/selectableItemBackground">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:background="@drawable/category_gradient_marketplace"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_height="32dp"
+                                android:src="@drawable/ic_marketplace"
+                                app:tint="@android:color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:fontFamily="@font/sf_pro_display_regular"
+                                android:text="@string/marketplace"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                </GridLayout>
+
+            </LinearLayout>
+
+            <!-- Rent a Machine Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ModernCardStyle"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="16dp">
+
+                    <RelativeLayout
+                        android:id="@+id/machineriesHeaderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/rentingAdsHeader"
+                            style="@style/SectionHeaderStyle"
+                            android:text="@string/rent_a_machine" />
+
+                        <TextView
+                            android:id="@+id/moreMachinesButton"
+                            style="@style/MoreButtonStyle"
+                            android:text="@string/more" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="8dp"
+                        android:orientation="horizontal"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Hire a Vehicle Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ModernCardStyle"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="16dp">
+
+                    <RelativeLayout
+                        android:id="@+id/vehiclesHeaderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/vehiclesAdsHeader"
+                            style="@style/SectionHeaderStyle"
+                            android:text="@string/hire_a_vehicle" />
+
+                        <TextView
+                            android:id="@+id/moreVehiclesButton"
+                            style="@style/MoreButtonStyle"
+                            android:text="@string/more" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/vehiclesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="8dp"
+                        android:orientation="horizontal"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Service Providers Section -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/ModernCardStyle"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="16dp">
+
+                    <RelativeLayout
+                        android:id="@+id/serviceProvidersHeaderLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:id="@+id/serviceProvidersHeader"
+                            style="@style/SectionHeaderStyle"
+                            android:text="@string/verified_service_providers" />
+
+                        <TextView
+                            android:id="@+id/moreServiceProvidersButton"
+                            style="@style/MoreButtonStyle"
+                            android:text="@string/more" />
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/serviceProvidersRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingHorizontal="8dp"
+                        android:orientation="horizontal"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Custom Animated Bottom Navigation -->
+    <FrameLayout
+        android:id="@+id/customBottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:background="@drawable/bottom_nav_background"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp">
+
+            <!-- Home Tab -->
+            <LinearLayout
+                android:id="@+id/navHome"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconHome"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_home" />
+                <TextView
+                    android:id="@+id/labelHome"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Home" />
+                <View
+                    android:id="@+id/indicatorHome"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+
+            <!-- Dashboard Tab -->
+            <LinearLayout
+                android:id="@+id/navDashboard"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconDashboard"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_dashboard" />
+                <TextView
+                    android:id="@+id/labelDashboard"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Dashboard" />
+                <View
+                    android:id="@+id/indicatorDashboard"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+
+            <!-- Marketplace Tab (Center FAB style) -->
+            <LinearLayout
+                android:id="@+id/navMarketplace"
+                style="@style/BottomNavItemStyle">
+                <androidx.cardview.widget.CardView
+                    style="@style/BottomNavFabStyle">
+                    <ImageView
+                        android:id="@+id/iconMarketplace"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_marketplace"
+                        app:tint="@android:color/white" />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/labelMarketplace"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Marketplace"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_green" />
+            </LinearLayout>
+
+            <!-- Inbox Tab -->
+            <LinearLayout
+                android:id="@+id/navInbox"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconInbox"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_inbox" />
+                <TextView
+                    android:id="@+id/labelInbox"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Inbox" />
+                <View
+                    android:id="@+id/indicatorInbox"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+
+            <!-- Profile Tab -->
+            <LinearLayout
+                android:id="@+id/navProfile"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconProfile"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_profile" />
+                <TextView
+                    android:id="@+id/labelProfile"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Profile" />
+                <View
+                    android:id="@+id/indicatorProfile"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

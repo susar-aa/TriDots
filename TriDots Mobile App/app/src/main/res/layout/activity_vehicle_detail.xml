@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_default"
+    tools:context=".detailed_screens.VehicleDetailActivity">
+
+    <!-- App Bar with Collapsing Image -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_collapseMode="parallax">
+
+                <ImageView
+                    android:id="@+id/detailImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/vehicle_image"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ad_placeholder" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:orientation="horizontal"
+                    android:layout_margin="16dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/previewImageButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="48dp"
+                        android:layout_marginEnd="8dp"
+                        app:icon="@drawable/ic_fullscreen"
+                        app:iconPadding="0dp"
+                        app:iconGravity="textStart"
+                        app:iconTint="@color/white"
+                        app:backgroundTint="#80000000"
+                        app:cornerRadius="20dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/sellerInfoButton"
+                        style="@style/Widget.MaterialComponents.Button.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingHorizontal="16dp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:backgroundTint="#80000000"
+                        app:cornerRadius="20dp"
+                        app:icon="@drawable/ic_profile"
+                        app:iconPadding="8dp"
+                        app:iconTint="@color/white"
+                        tools:text="Seller Name" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/ic_back" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Main Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!-- Main Details Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/detailNameTextView"
+                        style="@style/HeaderTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Toyota Hilux" />
+
+                    <TextView
+                        android:id="@+id/detailBrandModelTextView"
+                        style="@style/SubHeaderTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        tools:text="Toyota - 2022" />
+
+                    <TextView
+                        android:id="@+id/detailPriceTextView"
+                        style="@style/HeaderTextStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="?attr/colorPrimary"
+                        tools:text="Rs. 25,000 / Day" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp">
+                <Button
+                    android:id="@+id/sendMessageButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="56dp"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    app:icon="@drawable/ic_chat"
+                    android:text="Chat Seller" />
+                <Button
+                    android:id="@+id/inquireButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="56dp"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_marginStart="8dp"
+                    android:text="Inquire Now" />
+            </LinearLayout>
+
+            <!-- Specifications Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView style="@style/DetailSectionHeader" android:text="Specifications" />
+
+                    <TextView style="@style/DetailLabel" android:text="Location" />
+                    <TextView android:id="@+id/detailLocationTextView" style="@style/DetailValue" tools:text="Colombo, Sri Lanka" />
+
+                    <TextView style="@style/DetailLabel" android:text="Capacity" />
+                    <TextView android:id="@+id/detailCapacityTextView" style="@style/DetailValue" tools:text="5 Passengers" />
+
+                    <TextView style="@style/DetailLabel" android:text="Fuel Type" />
+                    <TextView android:id="@+id/detailFuelTypeTextView" style="@style/DetailValue" tools:text="Diesel" />
+
+                    <TextView style="@style/DetailLabel" android:text="Transmission" />
+                    <TextView android:id="@+id/detailTransmissionTextView" style="@style/DetailValue" tools:text="Automatic" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Description Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView style="@style/DetailSectionHeader" android:text="Description" />
+                    <TextView
+                        android:id="@+id/detailDescriptionTextView"
+                        style="@style/DetailValue"
+                        android:layout_marginTop="0dp"
+                        tools:text="A very well-maintained vehicle, perfect for long trips and family outings. Available with or without a driver." />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Feedback Card -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView android:id="@+id/feedbackTitleTextView" style="@style/DetailSectionHeader" android:text="Feedback &amp; Reviews"/>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/feedbacksRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

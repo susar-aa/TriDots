@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--
+    This creates a subtle, light background for the 'More' button.
+    It uses a transparent version of your primary color.
+    The value '1A' at the beginning of the color code represents about 10% opacity.
+    -->
+    <solid android:color="#1A027361"/>
+
+    <!-- This makes the background fully rounded. -->
+    <corners android:radius="18dp"/>
+
+</shape>

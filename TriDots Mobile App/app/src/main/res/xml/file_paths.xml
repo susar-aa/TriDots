@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- This path grants access to the standard Downloads directory.
+         The 'name' attribute can be anything unique.
+         The 'path' attribute specifies the subdirectory relative to the root of the external storage. -->
+    <external-path name="my_downloads" path="Download/" />
+
+    <!-- If your app saves files in its app-specific external storage directory (e.g., getExternalFilesDir(null)),
+         you might also need paths like this:
+    <external-files-path name="my_app_files" path="." />
+    -->
+</paths>

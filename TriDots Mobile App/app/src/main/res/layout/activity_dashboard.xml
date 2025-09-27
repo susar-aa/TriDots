@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_default">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primary_green">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Dashboard"
+            app:titleTextColor="@android:color/white" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:paddingBottom="100dp">
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/my_ads_button"
+                    style="@style/DashboardButtonStyle">
+
+                    <ImageView style="@style/DashboardIconStyle"
+                        android:src="@drawable/ic_calendar" />
+                    <TextView style="@style/DashboardLabelStyle"
+                        android:text="Manage My Ads" />
+                    <ImageView style="@style/DashboardChevronStyle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:id="@+id/inquiries_button"
+                    style="@style/DashboardButtonStyle">
+
+                    <ImageView style="@style/DashboardIconStyle"
+                        android:src="@drawable/ic_inquiry" />
+                    <TextView style="@style/DashboardLabelStyle"
+                        android:text="Inquiries" />
+                    <ImageView style="@style/DashboardChevronStyle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+                <LinearLayout
+                    android:id="@+id/my_orders_button"
+                    style="@style/DashboardButtonStyle">
+
+                    <ImageView style="@style/DashboardIconStyle"
+                        android:src="@drawable/ic_card" />
+                    <TextView style="@style/DashboardLabelStyle"
+                        android:text="My Orders" />
+                    <ImageView style="@style/DashboardChevronStyle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:id="@+id/manage_marketplace_button"
+                    style="@style/DashboardButtonStyle">
+
+                    <ImageView style="@style/DashboardIconStyle"
+                        android:src="@drawable/ic_marketplace" />
+                    <TextView style="@style/DashboardLabelStyle"
+                        android:text="Manage My Marketplace" />
+                    <ImageView style="@style/DashboardChevronStyle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                style="@style/ModernCardStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+                <LinearLayout
+                    android:id="@+id/products_sold_button"
+                    style="@style/DashboardButtonStyle">
+
+                    <ImageView style="@style/DashboardIconStyle"
+                        android:src="@drawable/ic_category" /> <TextView style="@style/DashboardLabelStyle"
+                    android:text="Products Sold" />
+                    <ImageView style="@style/DashboardChevronStyle" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/textViewInquiriesTitle"
+                style="@style/SectionHeaderStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Review Inquiries"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewToReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <FrameLayout
+        android:id="@+id/customBottomNavContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:background="@drawable/bottom_nav_background"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="8dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/navHome"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconHome"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_home" />
+                <TextView
+                    android:id="@+id/labelHome"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Home" />
+                <View
+                    android:id="@+id/indicatorHome"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navDashboard"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconDashboard"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_dashboard" />
+                <TextView
+                    android:id="@+id/labelDashboard"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Dashboard" />
+                <View
+                    android:id="@+id/indicatorDashboard"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navMarketplace"
+                style="@style/BottomNavItemStyle">
+                <androidx.cardview.widget.CardView
+                    style="@style/BottomNavFabStyle">
+                    <ImageView
+                        android:id="@+id/iconMarketplace"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_marketplace"
+                        app:tint="@android:color/white" />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/labelMarketplace"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Marketplace"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_green" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navInbox"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconInbox"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_inbox" />
+                <TextView
+                    android:id="@+id/labelInbox"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Inbox" />
+                <View
+                    android:id="@+id/indicatorInbox"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/navProfile"
+                style="@style/BottomNavItemStyle">
+                <ImageView
+                    android:id="@+id/iconProfile"
+                    style="@style/BottomNavIconStyle"
+                    android:src="@drawable/ic_profile" />
+                <TextView
+                    android:id="@+id/labelProfile"
+                    style="@style/BottomNavLabelStyle"
+                    android:text="Profile" />
+                <View
+                    android:id="@+id/indicatorProfile"
+                    style="@style/BottomNavIndicatorStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

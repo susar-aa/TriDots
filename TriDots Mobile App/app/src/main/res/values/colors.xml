@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Basic Palette -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Primary & Accent Colors -->
+    <color name="primary_green">#027361</color> <!-- Renamed from PrimaryGreen for consistency -->
+    <color name="primary_green_dark">#015747</color> <!-- Renamed from colorPrimaryDark, assuming it's a darker shade of primary_green -->
+    <color name="primary_green_light">#4DA69C</color> <!-- Renamed from primary_color_light -->
+    <color name="accent_main">#03A696</color> <!-- Renamed from accent_color -->
+    <color name="accent_dark">#028477</color> <!-- Renamed from accent_dark_color -->
+
+    <!-- Text Colors -->
+    <color name="text_primary">#1a1a1a</color> <!-- Kept from textColorPrimary -->
+    <color name="text_secondary">#6c757d</color> <!-- Kept from textColorSecondary -->
+    <color name="text_tertiary">#C7C7CC</color>
+    <color name="text_hint">#BDC3C7</color>
+
+    <!-- Background & Surface Colors -->
+    <color name="background_default">#f8fafb</color> <!-- Renamed from backgroundColor -->
+    <color name="background_light">#F8FFFE</color>
+    <color name="background_primary_alt">#F8F9FA</color> <!-- Renamed from background_primary to avoid conflict if 'background_default' is the main one -->
+    <color name="surface_default">@color/white</color> <!-- Was surface_primary, now references white -->
+    <color name="surface_variant">#F1F3F4</color>
+    <color name="card_background_default">@color/white</color> <!-- Was card_background, now references white -->
+
+    <!-- Status Colors -->
+    <color name="status_verified">#1976D2</color>
+    <color name="status_success">#27AE60</color>
+    <color name="status_warning">#F39C12</color>
+    <color name="status_error">#E74C3C</color>
+
+    <color name="gradient_start">#027361</color>
+    <color name="gradient_end">#4DA69C</color>
+
+    <!-- Other Accent Colors (if needed and distinct from primary accent) -->
+    <color name="accent_blue">#007AFF</color>
+    <color name="accent_orange">#FF9500</color>
+    <color name="accent_red">#FF3B30</color> <!-- Note: This is same as status_error, consolidate if they are the same concept -->
+
+    <!-- UI Element Specific Colors -->
+    <color name="loading_overlay">#80000000</color> <!-- 50% black -->
+    <color name="shadow_default">#20000000</color> <!-- 12.5% black, was shadow_color -->
+    <color name="card_shadow_default">#1A000000</color> <!-- 10% black, was card_shadow -->
+
+    <!-- Gradient Colors (can reference other colors) -->
+    <color name="gradient_start_default">@color/primary_green</color> <!-- Was gradient_start -->
+    <color name="gradient_end_default">@color/primary_green_light</color> <!-- Was gradient_end, ensure this is the intended light color -->
+
+    <color name="background_white">#FFFFFF</color>
+
+    <!-- Category Colors -->
+    <color name="machines_bg">#E3F2FD</color>
+    <color name="machines_tint">#1976D2</color>
+
+    <color name="vehicles_bg">#FFF3E0</color>
+    <color name="vehicles_tint">#F57C00</color>
+
+    <color name="laborers_bg">#F3E5F5</color>
+    <color name="laborers_tint">#7B1FA2</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="warning">#FF9800</color>
+    <color name="error">#F44336</color>
+
+    <!-- Shadow Colors -->
+    <color name="shadow_light">#10000000</color>
+    <color name="shadow_medium">#20000000</color>
+
+</resources>

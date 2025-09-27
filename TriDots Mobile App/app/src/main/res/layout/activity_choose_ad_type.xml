@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    tools:context=".add_screens.ChooseAdTypeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarChooseAd"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:title="Choose Ad Type"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What would you like to list?"
+        android:textSize="20sp"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/buttonAddRenting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="An Item for Rent"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonAddVehicle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A Vehicle"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/buttonAddService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A Professional Service"/>
+
+</LinearLayout>

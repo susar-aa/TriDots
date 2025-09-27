@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Permissions required for network access -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--
+ Storage Permissions:
+         - WRITE_EXTERNAL_STORAGE and READ_EXTERNAL_STORAGE are deprecated for API 29+ when targeting scoped storage.
+           They are still needed for API 28 and below to save/read to public directories like Downloads.
+           maxSdkVersion="28" limits these permissions to older Android versions.
+         - READ_MEDIA_IMAGES/VIDEO/AUDIO are for API 33+ to specifically read media collections.
+           For saving generated files to Downloads, these are generally not required if the app creates the file.
+           Keeping them as they were in your previous selection, but they might not be strictly needed for your PDF sharing.
+    -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TriDots"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".SoldProductsStatusFragment"
+            android:exported="false" />
+        <activity
+            android:name=".AddServiceAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddVehicleAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChooseAdTypeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddRentingAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.MarketplaceListFragment"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.ManageMarketplaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.AddProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.MyOrdersActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.MyOrdersActivity"
+            android:exported="false" />
+        <activity android:name=".main_screens.ProductsSoldActivity" />
+        <activity
+            android:name=".Marketplace.ReceiptActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.AddEditAddressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.AddressSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.CheckoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.CartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Marketplace.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.MarketplaceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.InboxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".adapters.DashboardInquiryAdapter"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+        <activity
+            android:name=".SellerStoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".detailed_screens.SellerDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InquiryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ServicesFragment"
+            android:exported="false" />
+        <activity
+            android:name=".RentalsFragment"
+            android:exported="false" />
+        <activity
+            android:name=".SearchResultsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VehicleDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RentingDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ServiceProviderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BusinessProfileDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".edit_screens.ServiceProviderAdEditActivity"
+            android:exported="false" />
+        <activity android:name=".ProductsSoldActivity" />
+        <activity
+            android:name=".edit_screens.VehicleAdEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".edit_screens.RentingAdEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EditAdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ManageAdsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ad_lists.ServiceProviderListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ad_lists.VehicleListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ad_lists.RentingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".category_lists.SubCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".detailed_screens.ServiceProviderDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".detailed_screens.VehicleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".category_lists.LaborersCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".category_lists.VehiclesCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".category_lists.MachinesCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.InquiriesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".detailed_screens.DetailedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileDisplayActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UploadProfilePictureActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.LoginMethodActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TutorialActivity"
+            android:exported="false" />
+        <activity
+            android:name=".main_screens.MainActivity"
+            android:exported="true"
+            tools:ignore="DuplicateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- FileProvider Declaration - THIS IS CRUCIAL FOR SHARING FILES -->
+        <!--
+ The 'authorities' attribute MUST match the string used in getUriForFile()
+             (e.g., "com.example.tridots.fileprovider")
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- This meta-data tag points to your XML file defining the paths FileProvider can access -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

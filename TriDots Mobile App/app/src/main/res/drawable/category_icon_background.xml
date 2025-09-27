@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+
+    <!--
+    This shape creates a circle. It's used as the background for the category icons
+    on the home screen to give them a uniform and clean look.
+    -->
+
+    <solid
+        android:color="@color/surface_variant" />
+    <!--
+    Using @color/surface_variant provides a light grey, neutral background
+    that will work well with your themed icons.
+    You can change this to any color from your colors.xml file.
+    For example, using a very light version of your primary green would also look good.
+    -->
+
+    <size
+        android:width="60dp"
+        android:height="60dp" />
+    <!--
+    This ensures the drawable has a consistent default size, although the
+    ImageView's layout_width and layout_height will ultimately determine the final size.
+    -->
+
+</shape>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:id="@+id/address_item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewAddressTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:text="Home Address"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:id="@+id/imageViewEditAddress"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_edit"
+                android:contentDescription="Edit Address"
+                android:layout_toStartOf="@id/imageViewDeleteAddress"
+                android:layout_marginEnd="16dp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <ImageView
+                android:id="@+id/imageViewDeleteAddress"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:contentDescription="Delete Address"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:focusable="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/textViewFullAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="123 Main Street, Apt 4B, City, District, Province, Postal Code, Country"
+            android:textColor="@android:color/darker_gray" />
+
+        <CheckBox
+            android:id="@+id/checkBoxIsDefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set as Default"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

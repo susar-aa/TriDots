@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".add_screens.AddVehicleAdActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAddVehicleAd"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:title="Add Vehicle Ad"
+            app:titleTextColor="@android:color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Category"
+                android:labelFor="@+id/spinnerVehicleCategory"/>
+            <Spinner
+                android:id="@+id/spinnerVehicleCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextVehicleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Vehicle Name" />
+
+            <EditText
+                android:id="@+id/editTextVehicleBrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Brand" />
+
+            <EditText
+                android:id="@+id/editTextVehicleModel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Model" />
+
+            <EditText
+                android:id="@+id/editTextVehicleDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:inputType="textMultiLine" />
+
+            <EditText
+                android:id="@+id/editTextCapacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Capacity (e.g., 5 seats)" />
+
+            <EditText
+                android:id="@+id/editTextFuelType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fuel Type (e.g., Petrol)" />
+
+            <EditText
+                android:id="@+id/editTextTransmissionType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Transmission (e.g., Automatic)" />
+
+            <Spinner
+                android:id="@+id/spinnerAvailability"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/availability_status_options" />
+
+            <EditText
+                android:id="@+id/editTextLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location" />
+
+            <Spinner
+                android:id="@+id/spinnerPriceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/price_type_options" />
+
+            <EditText
+                android:id="@+id/editTextAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Amount"
+                android:inputType="numberDecimal" />
+
+            <EditText
+                android:id="@+id/editTextVehicleKeywords"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Keywords" />
+
+            <ImageView
+                android:id="@+id/imageViewVehicle"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ad_placeholder" />
+
+            <Button
+                android:id="@+id/buttonSelectVehicleImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Select Image" />
+
+            <Button
+                android:id="@+id/buttonSubmitVehicleAd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Submit Ad" />
+
+            <ProgressBar
+                android:id="@+id/progressBarAddVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

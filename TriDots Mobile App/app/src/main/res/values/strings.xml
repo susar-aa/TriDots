@@ -1,0 +1,67 @@
+<resources>
+    <string name="app_name">TriDots</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="username">Username</string>
+    <string name="contact_number">Contact Number</string>
+    <string name="nic_number">NIC Number</string>
+    <string name="submit">Submit</string>
+    <string name="header_image">Header Image</string>
+    <string name="banner_image_item">Banner Image Item</string>
+    <string name="profile_image">Profile Picture</string>
+    <string name="machines_icon">Machines Category Icon</string>
+    <string name="vehicles_icon">Vehicles Category Icon</string>
+    <string name="laborers_icon">Laborers Category Icon</string>
+    <string name="product_image">Product Image</string>
+    <string name="vehicle_image">Vehicle Image</string>
+    <string name="laborer_profile_picture">Laborer Profile Picture</string>
+    <string name="category_icon">Category Icon</string>
+    <string name="search_result_image">Search Result Image</string>
+    <string name="detailed_image">Detailed Image</string>
+    <string name="search_icon" />
+    <string name="search_hint">Search</string>
+    <string name="machines">Machines</string>
+    <string name="vehicles">     Vehicles</string>
+    <string name="laborers">Laborers</string>
+    <string name="rent_a_machine">Rent A Machine</string>
+    <string name="more">More</string>
+    <string name="hire_a_vehicle">Hire A Vehicle</string>
+    <string name="verified_service_providers">Verified Service Providers</string>
+    <string name="seller_details_title">Seller Details</string>
+    <string name="business_account">Business Account</string>
+    <string name="personal_account">Personal Account</string>
+    <string name="no_link_available">No link available</string>
+    <string name="no_browser_available">No application can handle this request</string>
+    <string name="last_updated_format">Last updated: %s</string>
+    <string name="verified">Verified</string>
+    <string name="view_store">View Store</string>
+    <string name="banner_image">Banner Image</string>
+    <string name="marketplace">Marketplace</string>
+
+    <string-array name="availability_status_array">
+        <item>Available</item>
+        <item>Not Available</item>
+    </string-array>
+    <string-array name="price_type_array">
+        <item>per_km</item>
+        <item>per_hour</item>
+        <item>per_day</item>
+    </string-array>
+    <string-array name="fuel_type_array">
+        <item>Petrol</item>
+        <item>Diesel</item>
+        <item>Electric</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="transmission_type_array">
+        <item>Manual</item>
+        <item>Automatic</item>
+    </string-array>
+    <string-array name="approval_status_array">
+        <item>Approved</item>
+        <item>Not Approved</item>
+        <item>Under Review</item>
+        <item>Blocked</item>
+    </string-array>
+    z
+</resources>

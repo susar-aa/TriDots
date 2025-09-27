@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/detailProgressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/detailImageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ad_placeholder"
+            android:contentDescription="@string/detailed_image" />
+
+        <TextView
+            android:id="@+id/detailNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="Item Name" />
+
+        <TextView
+            android:id="@+id/detailBrandTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:text="Brand: Brand Name"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailModelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:text="Model: Model Name"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:text="Description goes here..." />
+
+        <TextView
+            android:id="@+id/detailLocationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:text="Location: Location Name" />
+
+        <TextView
+            android:id="@+id/detailContactTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Contact: 07XXXXXXXX"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailEmailTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Email: example@email.com"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailAddressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Address: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailExperienceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Experience: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailQualificationsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Qualifications: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailPricePerHourTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Price per Hour: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailPricePerDayTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Price per Day: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailCapacityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Capacity: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailFuelTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Fuel Type: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailTransmissionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Transmission: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailCategoryNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Category: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Type: ..."
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:text="Price: ..."
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</ScrollView>
